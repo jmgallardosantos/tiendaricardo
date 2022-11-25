@@ -8,16 +8,28 @@ class Linea extends Modelo
 {
     private Articulo $articulo;
     private int $cantidad;
+    private  $precio;
 
     public function __construct(Articulo $articulo, int $cantidad = 1)
     {
         $this->setArticulo($articulo);
         $this->setCantidad($cantidad);
+        $this->setPrecio($precio);
     }
 
     public function getArticulo(): Articulo
     {
         return $this->articulo;
+    }
+
+    public function getPrecio() 
+    {
+        return $this->precio;
+    }
+
+    public function setPrecio($precio)
+    {
+        $this->precio = $precio;
     }
 
     public function setArticulo(Articulo $articulo)

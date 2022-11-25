@@ -47,16 +47,19 @@
                             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                                 <th scope="col" class="py-3 px-6">Descripción</th>
                                 <th scope="col" class="py-3 px-6">Cantidad</th>
+                                <th scope="col" class="py-3 px-6">Precio</th>
                             </thead>
                             <tbody>
                                 <?php foreach ($carrito->getLineas() as $id => $linea): ?>
                                     <?php
                                     $articulo = $linea->getArticulo();
                                     $cantidad = $linea->getCantidad();
+                                    $precio = $linea->getPrecio();
                                     ?>
                                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                         <td class="py-4 px-6"><?= $articulo->descripcion ?></td>
                                         <td class="py-4 px-6 text-center"><?= $cantidad ?></td>
+                                        <td class="py-4 px-6 text-center"><?= $articulo->precio ?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

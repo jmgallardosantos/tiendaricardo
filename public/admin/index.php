@@ -19,6 +19,8 @@
 
 <body>
     <?php
+    use Tablas\Usuario;
+
     require '../../src/auxiliar.php';
 
     if ($usuario = Usuario::logueado()) {
